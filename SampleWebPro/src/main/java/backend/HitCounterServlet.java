@@ -17,11 +17,8 @@ public class HitCounterServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Increment hit count
         hitCount++;
-        // Set the hit count as a request attribute
         request.setAttribute("hitCount", hitCount);
-        // Forward to JSP
         request.getRequestDispatcher("countHits.jsp").forward(request, response);
     }
 }
